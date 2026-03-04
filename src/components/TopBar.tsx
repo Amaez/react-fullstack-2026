@@ -1,3 +1,4 @@
+// Base component generated using AI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,7 +13,7 @@ import { useState } from "react";
 export const TopBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const pages = ["Home", "Login"];
+  const pages = ["About Us", "Contact"];
 
   const handleOpenNavMenu = (event: any): void => {
     setAnchorEl(event.currentTarget);
@@ -31,7 +32,7 @@ export const TopBar = () => {
             component="div"
             sx={{ flexGrow: 1, fontWeight: "bold" }}
           >
-            My Website
+            Pely's Ice Cream
           </Typography>
 
           {/* Desktop Menu */}
