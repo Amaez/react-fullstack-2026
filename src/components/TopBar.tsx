@@ -13,26 +13,36 @@ import { useState } from "react";
 export const TopBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const pages = ["About Us", "Contact"];
+  const pages = ["Menu", "About Us", "Contact"];
 
   const handleOpenNavMenu = (event: any): void => {
+    console.log({ event });
     setAnchorEl(event.currentTarget);
   };
+
   const handleCloseNavMenu = (): void => {
     setAnchorEl(null);
   };
 
   return (
     <>
-      <AppBar color="primary">
+      <AppBar sx={{ background: "#fc3c8c" }}>
         <Toolbar>
           {/* Logo / Brand */}
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, fontWeight: "bold" }}
+            sx={{
+              flexGrow: 1,
+              fontWeight: "bold",
+              fontFamily: "Monoton",
+              fontStyle: "normal",
+            }}
           >
-            Pely's Ice Cream
+            <i>Pely's Ice Cream Parlor</i>
+            <Typography variant="caption" marginLeft={"10px"}>
+              <i>since 1958</i>
+            </Typography>
           </Typography>
 
           {/* Desktop Menu */}

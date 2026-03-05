@@ -12,10 +12,18 @@ import {
 } from "@mui/material";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
 
-const Footer = () => {
-  const generalLinks = ["About", "Careers", "Contact"];
-  const resourceLinks = ["Help Center", "Privacy Policy", "Terms", "Support"];
-
+export const Footer = () => {
+  // const generalLinks = ["About", "Careers", "Contact"];
+  // const resourceLinks = ["Help Center", "Privacy Policy", "Terms", "Support"];
+  const hourLinks = [
+    { day: "Monday", hours: "9:00am-7:30pm" },
+    { day: "Tuesday", hours: "9:00am-7:30pm" },
+    { day: "Wednesday", hours: "9:00am-7:30pm" },
+    { day: "Thursday", hours: "9:00am-7:30pm" },
+    { day: "Friday", hours: "9:00am-9:30pm" },
+    { day: "Saturday", hours: "9:00am-9:30pm" },
+    { day: "Sunday", hours: "9:00am-9:30pm" },
+  ];
   return (
     <Box
       component="footer"
@@ -38,8 +46,10 @@ const Footer = () => {
               Pely's Ice Cream
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8, color: "#fff" }}>
-              Serving rustic, family-style ice cream by the seaside for over 50
-              years!
+              <i>
+                Serving rustic, family-style ice cream by the seaside for over
+                50 years
+              </i>
             </Typography>
 
             <Box sx={{ mt: 2 }}>
@@ -61,11 +71,11 @@ const Footer = () => {
           {/* Quick Links */}
           <Grid>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              Pely's Ice Cream
+              Hours
             </Typography>
-            {generalLinks.map((item) => (
+            {hourLinks.map((item) => (
               <Link
-                key={item}
+                key={item.day}
                 href="#"
                 underline="none"
                 display="block"
@@ -75,13 +85,14 @@ const Footer = () => {
                   "&:hover": { color: "#fff" },
                 }}
               >
-                {item}
+                <b>{item.day}: </b>
+                {item.hours}
               </Link>
             ))}
           </Grid>
 
           {/* Resources */}
-          <Grid>
+          {/* <Grid>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               Resources
             </Typography>
@@ -100,15 +111,15 @@ const Footer = () => {
                 {item}
               </Link>
             ))}
-          </Grid>
+          </Grid> */}
 
           {/* Newsletter */}
           <Grid>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              Subscribe to our newsletter
+              Subscribe to our newsletter!
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8, mb: 2 }}>
-              Get the latest news and flavor additons straight to your inbox!
+              Get the latest news and flavor additons straight to your inbox
             </Typography>
             <Box
               component="form"
@@ -128,6 +139,8 @@ const Footer = () => {
                   borderRadius: 1,
                 }}
               />
+              {/* TODO: Change the input active color to match better
+              (it's currently) */}
               <Button
                 variant="contained"
                 sx={{
@@ -142,7 +155,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ backgroundColor: "#334155", my: 4 }} />
+        <Divider sx={{ backgroundColor: "#750031", my: 4 }} />
 
         {/* Bottom Section */}
         <Box
@@ -180,5 +193,3 @@ const Footer = () => {
     </Box>
   );
 };
-
-export default Footer;
