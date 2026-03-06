@@ -6,9 +6,11 @@ import { TopBar } from "./components/TopBar";
 function App() {
   return (
     <>
-      <TopBar />
-      <HomePage />
-      <Footer />
+      <div className="app-background">
+        <TopBar />
+        <HomePage />
+        <Footer />
+      </div>
     </>
   );
 }

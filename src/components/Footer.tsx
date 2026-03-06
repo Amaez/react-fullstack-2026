@@ -10,11 +10,9 @@ import {
   Divider,
   Grid,
 } from "@mui/material";
-import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
+import { Facebook, Twitter, Instagram } from "@mui/icons-material";
 
 export const Footer = () => {
-  // const generalLinks = ["About", "Careers", "Contact"];
-  // const resourceLinks = ["Help Center", "Privacy Policy", "Terms", "Support"];
   const hourLinks = [
     { day: "Monday", hours: "9:00am-7:30pm" },
     { day: "Tuesday", hours: "9:00am-7:30pm" },
@@ -24,6 +22,8 @@ export const Footer = () => {
     { day: "Saturday", hours: "9:00am-9:30pm" },
     { day: "Sunday", hours: "9:00am-9:30pm" },
   ];
+  const generalLinks = ["Privacy", "Terms", "Contact Us"];
+
   return (
     <Box
       component="footer"
@@ -51,26 +51,11 @@ export const Footer = () => {
                 50 years
               </i>
             </Typography>
-
-            <Box sx={{ mt: 2 }}>
-              <IconButton sx={{ color: "#fff" }}>
-                <Facebook />
-              </IconButton>
-              <IconButton sx={{ color: "#fff" }}>
-                <Twitter />
-              </IconButton>
-              <IconButton sx={{ color: "#fff" }}>
-                <Instagram />
-              </IconButton>
-              <IconButton sx={{ color: "#fff" }}>
-                <LinkedIn />
-              </IconButton>
-            </Box>
           </Grid>
 
-          {/* Quick Links */}
+          {/* Hours */}
           <Grid>
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+            <Typography variant="h6" fontWeight="bold" gutterBottom>
               Hours
             </Typography>
             {hourLinks.map((item) => (
@@ -131,7 +116,7 @@ export const Footer = () => {
             >
               <TextField
                 size="small"
-                placeholder="Your email"
+                placeholder="Email"
                 variant="outlined"
                 fullWidth
                 sx={{
@@ -155,7 +140,19 @@ export const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ backgroundColor: "#750031", my: 4 }} />
+        <Box sx={{ mt: 2 }}>
+          <IconButton sx={{ color: "#fff" }}>
+            <Facebook />
+          </IconButton>
+          <IconButton sx={{ color: "#fff" }}>
+            <Twitter />
+          </IconButton>
+          <IconButton sx={{ color: "#fff" }}>
+            <Instagram />
+          </IconButton>
+        </Box>
+
+        <Divider sx={{ backgroundColor: "#ac3164", my: 4 }} />
 
         {/* Bottom Section */}
         <Box
@@ -173,20 +170,19 @@ export const Footer = () => {
           </Typography>
 
           <Box>
-            <Link
-              href="#"
-              underline="none"
-              sx={{ color: "#cbd5e1", mx: 1, "&:hover": { color: "#fff" } }}
-            >
-              Privacy
-            </Link>
-            <Link
-              href="#"
-              underline="none"
-              sx={{ color: "#cbd5e1", mx: 1, "&:hover": { color: "#fff" } }}
-            >
-              Terms
-            </Link>
+            {generalLinks.map((link: string) => (
+              <Link
+                href="#"
+                underline="none"
+                sx={{
+                  color: "#ffdcea",
+                  mx: 1,
+                  "&:hover": { color: "#fff0f6" },
+                }}
+              >
+                {link}
+              </Link>
+            ))}
           </Box>
         </Box>
       </Container>

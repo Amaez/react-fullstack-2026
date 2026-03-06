@@ -1,19 +1,8 @@
-/* #root {
-  background: repeating-linear-gradient(
-    to right,
-    #ff97bb,
-    #ff97bb 15px,
-    #ffd180 15px,
-    #ffd180 30px
-  );
-} */
-
-/* .background {
-  background: repeating-linear-gradient(
-    to right,
-    #f6ba52,
-    #f6ba52 10px,
-    #ffd180 10px,
-    #ffd180 20px
-  );
-} */
+.topAppBar {
+  height: 10vh;
+  filter: drop-shadow(10px);
+  /* Creates the bottom scalloped edge */
+  mask:
+    linear-gradient(0, #0000 30px, #000 0),
+    radial-gradient(30px, #000 calc(100% - 1px), #0000) bottom/55.5px 60px;
+}

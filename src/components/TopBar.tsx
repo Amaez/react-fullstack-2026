@@ -13,7 +13,7 @@ import { useState } from "react";
 export const TopBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const pages = ["Menu", "About Us", "Contact"];
+  const pages = ["Menu", "About Us"];
 
   const handleOpenNavMenu = (event: any): void => {
     console.log({ event });
@@ -26,7 +26,7 @@ export const TopBar = () => {
 
   return (
     <>
-      <AppBar sx={{ background: "#fc3c8c" }}>
+      <AppBar sx={{ background: "#FF85B7" }} className="topAppBar">
         <Toolbar>
           {/* Logo / Brand */}
           <Typography
@@ -39,10 +39,10 @@ export const TopBar = () => {
               fontStyle: "normal",
             }}
           >
-            <i>Pely's Ice Cream Parlor</i>
-            <Typography variant="caption" marginLeft={"10px"}>
-              <i>since 1958</i>
-            </Typography>
+            Pely's Ice Cream Parlor
+          </Typography>
+          <Typography variant="caption" marginLeft={"10px"}>
+            <i>since 1958</i>
           </Typography>
 
           {/* Desktop Menu */}
