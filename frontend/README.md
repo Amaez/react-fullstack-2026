@@ -6,7 +6,7 @@ What is it?
 
 - An ice cream shop website! Learning goals are to create a cohesive, fun, and welcoming modern design while creating an API and database for the backend.
 
-# Tech Stack:
+# Tech Stack: MERN
 
 ## Frontend
 
@@ -19,9 +19,11 @@ What is it?
 
 ## Backend
 
-TBD
+- Node.js
+- MongoDB
+- Express
 
-# To run this application:
+# How to run the application:
 
 1. Clone the repo using HTTPS or SSH
 2. Run 'npm i' to install dependencies
@@ -32,3 +34,5 @@ TBD
 1. How to make stripes + scalloped borders using CSS
 
 # Credits
+- backend tutorial: https://www.youtube.com/watch?v=F9gB5b4jgOI
+- css stripes + scalloped border tutorial: https://css-generators.com/custom-borders/
