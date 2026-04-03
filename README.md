@@ -6,6 +6,12 @@ What is it?
 
 - An ice cream shop website! Learning goals are to create a cohesive, fun, and welcoming modern design while creating an API and database for the backend.
 
+# Goals:
+1. No console errors
+2. Learn how to connect front end to back end (retrieve data from a database, build an API)
+3. Ensure mobile-responsiveness
+4. Ensure web accessibility
+
 # Tech Stack: MERN
 
 ## Frontend
