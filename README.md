@@ -1,43 +1,32 @@
-# Pely's Ice Cream Parlor
+# 🍦 Pely's Ice Cream Parlor
 
-A self-drafted practice project to learn how to build a fullstack application with a real-world feel + incorporate what I've learned from working on enterprise projects.
+A self-drafted fullstack learning project- more specifically, an ice cream shop website! 
+  - Learning goals: create a cohesive, fun, and welcoming modern design while learning how to build an API and database for the backend.
 
-What is it?
-
-- An ice cream shop website! Learning goals are to create a cohesive, fun, and welcoming modern design while creating an API and database for the backend.
-
-# Goals:
-1. No console errors
-2. Learn how to connect front end to back end (retrieve data from a database, build an API)
-3. Ensure mobile-responsiveness
-4. Ensure web accessibility
-
-# Tech Stack: MERN
-
-## Frontend
-
+# 📦 Technologies
 - Vite
 - React + Typescript
 - Material-UI
 - Prettier + ESlint
 - Vitest (unit tests) + Cypress (E2E tests)
-- AI (mainly to generate component templates to speed up development)
-
-## Backend
-
+- AI (mostly to generate component templates)
 - Node.js
 - MongoDB
 - Express
 
-# How to run this application:
+# ⭐ Features
+- mobile-responsive
+- home and flavor menu page
 
+# 🧠 What I learned
+1. How to build an API + connect it to the frontend
+2. How to connect a self-made API to a MongoDB database
+3. How to create stripes + scalloped borders using CSS
+
+# 🚀 How to run
 1. Clone the repo using HTTPS or SSH
 2. Run 'npm i' to install the dependencies
 3. Run 'npm run dev' and open the localhost link in your browser
-
-# What I learned:
-
-1. How to make stripes + scalloped borders using CSS
 
 # Credits
 - backend tutorial: https://www.youtube.com/watch?v=F9gB5b4jgOI
